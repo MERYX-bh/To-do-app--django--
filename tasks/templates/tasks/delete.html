@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+	<center><b><p>Are you sure you want to delete "{{item}}"?</p></b>
+
+<a href="{% url 'list' %}" >Cancel</a>
+
+<form method="POST" action="">
+	{% csrf_token %}
+  <input type="submit" name="Confirmer" value="Confirmer">
+</form>
+</center>
+{% endblock %}
